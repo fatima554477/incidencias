@@ -324,7 +324,7 @@ echo $DOCUMENTO_INCIDENCIAS[1];?></td>
 <?php  if($database->plantilla_filtro($nombreTabla,"STATUS",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $row['STATUS'];?></td >
 <?php } ?>
 
-<?php  if($database->plantilla_filtro($nombreTabla,"OBSERVACIONES_INCIDENCIAS",$altaeventos,$DEPARTAMENTO)=="si"){ ?>
+<?php  if($database->plantilla_filtro($nombreTabla,"RESPUESTA",$altaeventos,$DEPARTAMENTO)=="si"){ ?>
 
 <td style="
     text-align:center;
@@ -334,7 +334,7 @@ echo $DOCUMENTO_INCIDENCIAS[1];?></td>
     -webkit-box-orient:vertical;
     overflow:hidden;
 ">
-    <?php echo htmlspecialchars($row['OBSERVACIONES_INCIDENCIAS']); ?>
+    <?php echo htmlspecialchars($row['RESPUESTA']); ?>
 </td>
 
 <?php } ?>
