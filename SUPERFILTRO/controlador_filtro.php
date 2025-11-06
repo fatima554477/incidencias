@@ -296,8 +296,24 @@ echo $DOCUMENTO_INCIDENCIAS[1];?></td>
 <?php } ?>
 <?php  if($database->plantilla_filtro($nombreTabla,"Departamento",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $row['Departamento'];?></td>
 <?php } ?>
-<?php  if($database->plantilla_filtro($nombreTabla,"OBSERVACIONES_INCIDENCIAS",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $row['OBSERVACIONES_INCIDENCIAS'];?></td>
+
+
+<?php  if($database->plantilla_filtro($nombreTabla,"OBSERVACIONES_INCIDENCIAS",$altaeventos,$DEPARTAMENTO)=="si"){ ?>
+
+<td style="
+    text-align:center;
+    max-width:260px;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+">
+    <?php echo htmlspecialchars($row['OBSERVACIONES_INCIDENCIAS']); ?>
+</td>
+
 <?php } ?>
+
+
 <?php  if($database->plantilla_filtro($nombreTabla,"base64_file",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $base64_file;?></td>
 <?php } ?>
 <?php  if($database->plantilla_filtro($nombreTabla,"ADJUNTO_INCIDENCIAS",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $urlADJUNTO_INCIDENCIAS;?></td>
@@ -308,7 +324,19 @@ echo $DOCUMENTO_INCIDENCIAS[1];?></td>
 <?php  if($database->plantilla_filtro($nombreTabla,"STATUS",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $row['STATUS'];?></td >
 <?php } ?>
 
-<?php  if($database->plantilla_filtro($nombreTabla,"RESPUESTA",$altaeventos,$DEPARTAMENTO)=="si"){ ?><td style="text-align:center"><?php echo $row['RESPUESTA'];?></td>
+<?php  if($database->plantilla_filtro($nombreTabla,"OBSERVACIONES_INCIDENCIAS",$altaeventos,$DEPARTAMENTO)=="si"){ ?>
+
+<td style="
+    text-align:center;
+    max-width:260px;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+">
+    <?php echo htmlspecialchars($row['OBSERVACIONES_INCIDENCIAS']); ?>
+</td>
+
 <?php } ?>
 
 
