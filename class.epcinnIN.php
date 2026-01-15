@@ -16,13 +16,7 @@ PROGRAMER: SANDOR ACTUALIZACION: 1 MAY 2023
 
 
 	
-	/*public function colaborador_generico_bueno_inicidencias(){
-	$conn = $this->db();                                           
-	$variablequery = "select *,01informacionpersonal.idRelacion as aliasid from 01informacionpersonal inner join 01adjuntoscolaboradores on 01informacionpersonal.idRelacion = 01adjuntoscolaboradores.idRelacion where ESTATUS_CRM_ACTIVOBAJA = 'ACTIVO' order by 01informacionpersonal.`NOMBRE_1` asc; ";
-	
-	return $arrayquery = mysqli_query($conn,$variablequery);	
-		
-	}*/
+
 
 
 
@@ -197,24 +191,11 @@ RETURN
 
 	
 	
-	public function variable_comborelacion1a(){
-		$session = isset($_SESSION['id'])?$_SESSION['id']:'';		
-		
-		$conn = $this->db();				
-		$variablequery = "select * from 02empresarelacion where idRelacionP = '".$session."' ";
-		$arrayquery = mysqli_query($conn,$variablequery);
-		$row = mysqli_fetch_array($arrayquery);
-		if($row['idRelacionC']>=1){
-		return $row['idRelacionC'];
-		}else{
-		return "no";			
-		}
-		
-		}
+
 
 		public function variables_informacionfiscal_logo(){
 		$conn = $this->db();
-		$variablequery = "select ADJUNTAR_LOGO_INFORMACION from 03docs_info_fiscal where idRelacion = '".$_SESSION['idlc']."' ";
+		$variablequery = "select ADJUNTAR_LOGO_INFORMACION from 03docs_info_fiscal where idRelacion = '".$_SESSION['id']."' ";
 		$arrayquery = mysqli_query($conn,$variablequery);
 		$row = mysqli_fetch_array($arrayquery, MYSQLI_ASSOC);
 		return $row['ADJUNTAR_LOGO_INFORMACION'];
